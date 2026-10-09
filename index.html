@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Send the Kinvara 30 km/h submission to Galway County Council and all ten local councillors in one tap.">
+<meta property="og:title" content="A village-wide 30 km/h for Kinvara">
+<meta property="og:description" content="One tap to send the speed limit submission to the council and all ten local councillors.">
+<meta property="og:type" content="website">
+<title>Kinvara 30 km/h Submission</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout: single narrow column, road-sign roundel as the one bold mark, action buttons first, email preview below */
+:root{
+  --bg:#f6f7f5; --surface:#ffffff; --fg:#1b2420; --muted:#58645e; --line:#d9ded9;
+  --sign:#c8102e; --accent:#1f5f46; --accent-fg:#ffffff;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121815; --surface:#1a221e; --fg:#e7ece9; --muted:#9aa8a1; --line:#2c3732;
+  --sign:#ef4a5c; --accent:#5fbf95; --accent-fg:#0d1411; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121815; --surface:#1a221e; --fg:#e7ece9; --muted:#9aa8a1; --line:#2c3732;
+  --sign:#ef4a5c; --accent:#5fbf95; --accent-fg:#0d1411; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55}
+.wrap{max-width:40rem;margin:0 auto;padding:2rem 16px 3rem;display:grid;gap:1.75rem}
+header{display:flex;gap:1.1rem;align-items:center}
+.roundel{flex:none;width:84px;height:84px;border-radius:50%;border:9px solid var(--sign);background:#fff;
+  display:grid;place-items:center;font-family:var(--display);font-weight:700;color:#111;line-height:.85;text-align:center}
+.roundel b{font-size:2.3rem;display:block}.roundel small{font-size:.8rem;letter-spacing:.04em}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.02;margin:0;text-wrap:balance;text-transform:uppercase;letter-spacing:.01em}
+.lede{margin:0;color:var(--muted)}
+h2{font-family:var(--display);font-weight:600;font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 .6rem}
+.steps{display:grid;gap:.9rem}
+label{font-weight:700;display:block;margin-bottom:.3rem}
+input{width:100%;box-sizing:border-box;font:inherit;padding:.7rem .8rem;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg)}
+input:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hint{font-size:.9rem;color:var(--muted);margin:.35rem 0 0}
+.btns{display:grid;gap:.6rem}
+.btn{display:flex;justify-content:center;align-items:center;gap:.5rem;text-decoration:none;font-weight:700;font-size:1.05rem;
+  padding:.95rem 1rem;border-radius:8px;border:2px solid var(--accent);color:var(--accent);background:transparent;cursor:pointer;font-family:inherit}
+.btn.primary{background:var(--accent);color:var(--accent-fg)}
+.btn:hover{filter:brightness(1.07)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+@media (max-width:420px){.row{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.1rem 1.2rem}
+dl{margin:0;display:grid;gap:.7rem}
+dt{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+dd{margin:0;font-family:var(--mono);font-size:.85rem;word-break:break-all;min-width:0}
+.copyline{display:flex;gap:.5rem;align-items:flex-start;justify-content:space-between}
+.copy{flex:none;font:inherit;font-size:.85rem;font-weight:700;padding:.3rem .7rem;border-radius:5px;border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+.body{white-space:pre-wrap;font-size:.95rem;margin:0;max-width:65ch}
+.toast{font-size:.9rem;color:var(--accent);min-height:1.3em;margin:0}
+footer{font-size:.85rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="roundel" aria-hidden="true"><div><b>30</b><small>km/h</small></div></div>
+    <div>
+      <h1>A village-wide 30&nbsp;km/h for Kinvara</h1>
+    </div>
+  </header>
+  <p class="lede">Galway County Council is reviewing speed limits. Its draft keeps 30&nbsp;km/h to the village centre and leaves roads by our schools and estates at 50&nbsp;km/h. Send the submission below to the council and all ten local councillors in one go.</p>
+
+  <section class="steps">
+    <div>
+      <label for="name">Your name</label>
+      <input id="name" autocomplete="name" placeholder="e.g. Joe Bloggs">
+      <p class="hint">Optional. Signed as "Kinvara Resident" if left blank. A named submission carries more weight.</p>
+    </div>
+    <div>
+      <label for="road">Where you live in Kinvara</label>
+      <input id="road" placeholder="e.g. Rinn na Mara">
+      <p class="hint">Optional. Added under your name.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Send it</h2>
+    <div class="btns">
+      <a class="btn primary" id="mailto" href="#">Open in my email app</a>
+      <div class="row">
+        <a class="btn" id="gmail" href="#" target="_blank" rel="noopener">Open in Gmail</a>
+        <a class="btn" id="outlook" href="#" target="_blank" rel="noopener">Open in Outlook / Hotmail</a>
+      </div>
+      <p class="hint">Everything is filled in for you. Check it, add a line of your own if you like, then press Send. If nothing opens, use the copy buttons below.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Or copy it yourself</h2>
+    <div class="panel">
+      <dl>
+        <div><div class="copyline"><dt>To</dt><button class="copy" data-k="to">Copy</button></div><dd id="v-to"></dd></div>
+        <div><div class="copyline"><dt>CC (10 councillors)</dt><button class="copy" data-k="cc">Copy</button></div><dd id="v-cc"></dd></div>
+        <div><div class="copyline"><dt>Subject</dt><button class="copy" data-k="subject">Copy</button></div><dd id="v-subject"></dd></div>
+        <div><div class="copyline"><dt>Message</dt><button class="copy" data-k="body">Copy</button></div><p class="body" id="v-body"></p></div>
+      </dl>
+      <p class="toast" id="toast" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <footer>Shared by Kinvara residents. The submission goes to speedlimitreview@galwaycoco.ie, the council's address for the speed limit review.</footer>
+</div>
+
+<script>
+const TO = "speedlimitreview@galwaycoco.ie";
+const CC = ["pkillilea","icanning","gdonohue","gfinnerty","lharney","dnkelly","mkinane","mmaher","jmcclearn","mregan"]
+  .map(u => u + "@cllr.galwaycoco.ie");
+const SUBJECT = "Submission on Proposed Speed Limit Bye-Laws – Extend 30 km/h to All of Kinvara";
+const BODY = `To whom it may concern,
+
+Submission on Proposed Speed Limits – Kinvara
+
+The proposed 30 km/h zone for Kinvara is far too limited and needs to be redrawn.
+
+The obvious and sensible approach is to apply the new 30 km/h limit to the entire existing 50 km/h built-up area of our village, including the southern approach road, Rinn na Mara, the areas around our schools and the principal residential areas.
+
+The current proposal simply does not make sense. National road safety policy is explicitly moving towards lower speeds in built-up areas because speed is one of the most important determinants of whether a collision results in serious injury or death. Galway County Council has also committed itself to safer school environments, improved walking and cycling conditions and lower speeds in urban areas.
+
+Yet in Kinvara, the Council is proposing a small 30 km/h zone concentrated around the village centre while leaving roads outside our schools and through residential parts of the village at 50 km/h.
+
+That is not a coherent road safety policy. It is a line on a map that bears little relationship to how people actually move around Kinvara.
+
+Children walk and cycle to school on these roads. Families walk from housing estates into the village. Older people cross them. People cycle along them. These are not rural roads passing through open countryside; they are part of our lived, built-up village.
+
+There is also no need to make this complicated. The existing 50 km/h signs already identify the practical boundary of the built-up area. Replace those signs with 30 km/h signs and create one clear, consistent and easily understood speed limit throughout Kinvara.
+
+Anything less leaves us with the absurd situation where 30 km/h is considered necessary on Main Street, but 50 km/h remains acceptable outside schools and through our newer residential areas used every day by children and families.
+
+That is impossible to justify.
+
+The draft boundary should be amended before these bye-laws are adopted. Kinvara needs a genuine village-wide 30 km/h zone, not a token one, and we will not accept anything less.
+
+Sincerely,
+`;
+
+const $ = id => document.getElementById(id);
+const enc = encodeURIComponent;
+
+function signature(){
+  const n = $("name").value.trim(), r = $("road").value.trim();
+  if (!n && !r) return "Kinvara Resident";
+  return (n || "Kinvara Resident") + (r ? "\n" + r + ", Kinvara" : "");
+}
+function current(){ return {to:TO, cc:CC.join(", "), subject:SUBJECT, body:BODY + signature()}; }
+
+function render(){
+  const m = current();
+  $("v-to").textContent = m.to;
+  $("v-cc").textContent = m.cc;
+  $("v-subject").textContent = m.subject;
+  $("v-body").textContent = m.body;
+  const ccc = CC.join(",");
+  $("mailto").href = `mailto:${TO}?cc=${ccc}&subject=${enc(m.subject)}&body=${enc(m.body)}`;
+  $("gmail").href = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=${enc(TO)}&cc=${enc(ccc)}&su=${enc(m.subject)}&body=${enc(m.body)}`;
+  $("outlook").href = `https://outlook.live.com/owa/?path=/mail/action/compose&to=${enc(TO)}&cc=${enc(ccc)}&subject=${enc(m.subject)}&body=${enc(m.body)}`;
+}
+
+["name","road"].forEach(id => {
+  try { $(id).value = localStorage.getItem("k30-"+id) || ""; } catch(e){}
+  $(id).addEventListener("input", () => { try { localStorage.setItem("k30-"+id, $(id).value); } catch(e){} render(); });
+});
+
+document.querySelectorAll(".copy").forEach(b => b.addEventListener("click", () => {
+  const k = b.dataset.k, text = current()[k];
+  const done = ok => { $("toast").textContent = ok ? "Copied." : "Couldn't copy automatically. The text is selected, so copy it with your device."; };
+  const fallback = () => {
+    const el = $("v-"+k), range = document.createRange();
+    range.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(range); done(false);
+  };
+  try { navigator.clipboard.writeText(text).then(() => done(true), fallback); } catch(e){ fallback(); }
+}));
+
+render();
+</script>
+</body>
+</html>
