@@ -44,8 +44,6 @@ input:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(-
   padding:.95rem 1rem;border-radius:8px;border:2px solid var(--accent);color:var(--accent);background:transparent;cursor:pointer;font-family:inherit}
 .btn.primary{background:var(--accent);color:var(--accent-fg)}
 .btn:hover{filter:brightness(1.07)}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
-@media (max-width:420px){.row{grid-template-columns:1fr}}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.1rem 1.2rem}
 dl{margin:0;display:grid;gap:.7rem}
 dt{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
@@ -86,10 +84,6 @@ footer{font-size:.85rem;color:var(--muted)}
     <h2>Send it</h2>
     <div class="btns">
       <a class="btn primary" id="mailto" href="#">Open in my email app</a>
-      <div class="row">
-        <a class="btn" id="gmail" href="#" target="_blank" rel="noopener">Open in Gmail</a>
-        <a class="btn" id="outlook" href="#" target="_blank" rel="noopener">Open in Outlook / Hotmail</a>
-      </div>
       <p class="hint">Everything is filled in for you. Check it, add a line of your own if you like, then press Send. If nothing opens, use the copy buttons below.</p>
     </div>
   </section>
@@ -160,8 +154,6 @@ function render(){
   $("v-body").textContent = m.body;
   const ccc = CC.join(",");
   $("mailto").href = `mailto:${TO}?cc=${ccc}&subject=${enc(m.subject)}&body=${enc(m.body)}`;
-  $("gmail").href = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&to=${enc(TO)}&cc=${enc(ccc)}&su=${enc(m.subject)}&body=${enc(m.body)}`;
-  $("outlook").href = `https://outlook.live.com/owa/?path=/mail/action/compose&to=${enc(TO)}&cc=${enc(ccc)}&subject=${enc(m.subject)}&body=${enc(m.body)}`;
 }
 
 ["name","road"].forEach(id => {
