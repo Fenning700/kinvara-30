@@ -66,7 +66,7 @@ footer{font-size:.85rem;color:var(--muted)}
       <h1>Permanent 30&nbsp;km/h outside Kinvara&rsquo;s schools</h1>
     </div>
   </header>
-  <p class="lede">Galway County Council has decided on periodic 30&nbsp;km/h limits outside St.&nbsp;Joseph&rsquo;s Primary School and Seamount College. These only apply at school times, even though the playground, pitches and halls are used all day, every day. Send the email below to the council and all ten local councillors in one go, asking them to reverse the decision.</p>
+  <p class="lede">Galway County Council has decided on periodic 30&nbsp;km/h limits outside St.&nbsp;Joseph&rsquo;s Primary School and Seamount College. These only apply at school times, even though the playground, pitches and halls are used all day, every day. Send the email below to all ten local councillors and two senior council officials in one go, asking them to reverse the decision.</p>
 
   <section class="steps">
     <div>
@@ -93,8 +93,7 @@ footer{font-size:.85rem;color:var(--muted)}
     <h2>Or copy it yourself</h2>
     <div class="panel">
       <dl>
-        <div><div class="copyline"><dt>To</dt><button class="copy" data-k="to">Copy</button></div><dd id="v-to"></dd></div>
-        <div><div class="copyline"><dt>CC (councillors and council officials)</dt><button class="copy" data-k="cc">Copy</button></div><dd id="v-cc"></dd></div>
+        <div><div class="copyline"><dt>To (12 councillors and officials)</dt><button class="copy" data-k="to">Copy</button></div><dd id="v-to"></dd></div>
         <div><div class="copyline"><dt>Subject</dt><button class="copy" data-k="subject">Copy</button></div><dd id="v-subject"></dd></div>
         <div><div class="copyline"><dt>Message</dt><button class="copy" data-k="body">Copy</button></div><p class="body" id="v-body"></p></div>
       </dl>
@@ -102,12 +101,11 @@ footer{font-size:.85rem;color:var(--muted)}
     </div>
   </section>
 
-  <footer>Shared by Kinvara residents. The email goes to Galway County Council&rsquo;s speed limit review address, two council officials and the ten councillors for the area.</footer>
+  <footer>Shared by Kinvara residents. The email goes to the ten councillors for the area and two senior Galway County Council officials.</footer>
 </div>
 
 <script>
-const TO = ["speedlimitreview@galwaycoco.ie"];
-const CC = ["pkillilea","icanning","gdonohue","gfinnerty","lharney","dnkelly","mkinane","mmaher","jmcclearn","mregan"]
+const TO = ["pkillilea","icanning","gdonohue","gfinnerty","lharney","dnkelly","mkinane","mmaher","jmcclearn","mregan"]
   .map(u => u + "@cllr.galwaycoco.ie").concat(["ufinn@galwaycoco.ie","lconneally@galwaycoco.ie"]);
 const SUBJECT = "Kinvara: Reverse the Periodic Speed Limit Decision – Permanent 30 km/h at St. Joseph’s and Seamount College";
 const BODY = `Dear all,
@@ -151,15 +149,14 @@ function signature(){
   if (!n && !r) return "Kinvara Resident";
   return (n || "Kinvara Resident") + (r ? "\n" + r + ", Kinvara" : "");
 }
-function current(){ return {to:TO.join(", "), cc:CC.join(", "), subject:SUBJECT, body:BODY + signature()}; }
+function current(){ return {to:TO.join(", "), subject:SUBJECT, body:BODY + signature()}; }
 
 function render(){
   const m = current();
   $("v-to").textContent = m.to;
-  $("v-cc").textContent = m.cc;
   $("v-subject").textContent = m.subject;
   $("v-body").textContent = m.body;
-  $("mailto").href = `mailto:${TO.join(",")}?cc=${CC.join(",")}&subject=${enc(m.subject)}&body=${enc(m.body)}`;
+  $("mailto").href = `mailto:${TO.join(",")}?subject=${enc(m.subject)}&body=${enc(m.body)}`;
 }
 
 ["name","road"].forEach(id => {
