@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Send the Kinvara 30 km/h submission to Galway County Council and all ten local councillors in one tap.">
-<meta property="og:title" content="A village-wide 30 km/h for Kinvara">
-<meta property="og:description" content="One tap to send the speed limit submission to the council and all ten local councillors.">
+<meta name="description" content="Ask Galway County Council to make the 30 km/h limits outside Kinvara's schools permanent, not periodic.">
+<meta property="og:title" content="Permanent 30 km/h outside Kinvara's schools">
+<meta property="og:description" content="One tap to email the council and all ten local councillors asking them to reverse the periodic speed limit decision.">
 <meta property="og:type" content="website">
 <title>Kinvara 30 km/h Submission</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
 <style>
-/* Layout: single narrow column, road-sign roundel as the one bold mark, action buttons first, email preview below */
+/* Layout: single narrow column, road-sign roundel as the one bold mark, action button first, email preview below */
 :root{
   --bg:#f6f7f5; --surface:#ffffff; --fg:#1b2420; --muted:#58645e; --line:#d9ded9;
   --sign:#c8102e; --accent:#1f5f46; --accent-fg:#ffffff;
@@ -58,20 +58,21 @@ footer{font-size:.85rem;color:var(--muted)}
 </head>
 <body>
 
+
 <div class="wrap">
   <header>
     <div class="roundel" aria-hidden="true"><div><b>30</b><small>km/h</small></div></div>
     <div>
-      <h1>A village-wide 30&nbsp;km/h for Kinvara</h1>
+      <h1>Permanent 30&nbsp;km/h outside Kinvara&rsquo;s schools</h1>
     </div>
   </header>
-  <p class="lede">Galway County Council is reviewing speed limits. Its draft keeps 30&nbsp;km/h to the village centre and leaves roads by our schools and estates at 50&nbsp;km/h. Send the submission below to the council and all ten local councillors in one go.</p>
+  <p class="lede">Galway County Council has decided on periodic 30&nbsp;km/h limits outside St.&nbsp;Joseph&rsquo;s Primary School and Seamount College. These only apply at school times, even though the playground, pitches and halls are used all day, every day. Send the email below to the council and all ten local councillors in one go, asking them to reverse the decision.</p>
 
   <section class="steps">
     <div>
       <label for="name">Your name</label>
       <input id="name" autocomplete="name" placeholder="e.g. Joe Bloggs">
-      <p class="hint">Optional. Signed as "Kinvara Resident" if left blank. A named submission carries more weight.</p>
+      <p class="hint">Optional. Signed as "Kinvara Resident" if left blank. A named email carries more weight.</p>
     </div>
     <div>
       <label for="road">Where you live in Kinvara</label>
@@ -101,37 +102,43 @@ footer{font-size:.85rem;color:var(--muted)}
     </div>
   </section>
 
-  <footer>Shared by Kinvara residents. The submission goes to speedlimitreview@galwaycoco.ie, the council's address for the speed limit review.</footer>
+  <footer>Shared by Kinvara residents. The email goes to Galway County Council&rsquo;s speed limit review address, two council officials and the ten councillors for the area.</footer>
 </div>
 
 <script>
-const TO = "speedlimitreview@galwaycoco.ie";
+const TO = ["speedlimitreview@galwaycoco.ie","ufinn@galwaycoco.ie","lconneally@galwaycoco.ie"];
 const CC = ["pkillilea","icanning","gdonohue","gfinnerty","lharney","dnkelly","mkinane","mmaher","jmcclearn","mregan"]
   .map(u => u + "@cllr.galwaycoco.ie");
-const SUBJECT = "Submission on Proposed Speed Limit Bye-Laws – Extend 30 km/h to All of Kinvara";
-const BODY = `To whom it may concern,
+const SUBJECT = "Kinvara: Reverse the Periodic Speed Limit Decision – Permanent 30 km/h at St. Joseph’s and Seamount College";
+const BODY = `Dear all,
 
-Submission on Proposed Speed Limits – Kinvara
+I am deeply concerned at the proposal to introduce periodic, rather than permanent, 30km/h speed limits outside our schools in Kinvara. It is a fundamentally flawed approach to road safety, one which appears to disregard both compelling international research and the Department of Transport’s own speed limit guidelines.
 
-The proposed 30 km/h zone for Kinvara is far too limited and needs to be redrawn.
+The vulnerability of children, pedestrians and cyclists does not begin when the school gates open, nor does it end when they close. Kinvara is a living, thriving community where people walk and cycle throughout the day, in the evenings, at weekends and during school holidays.
 
-The obvious and sensible approach is to apply the new 30 km/h limit to the entire existing 50 km/h built-up area of our village, including the southern approach road, Rinn na Mara, the areas around our schools and the principal residential areas.
+There is a playground, a tennis court and an astroturf pitch on the grounds of St. Joseph’s Primary School. All are used extensively outside of school hours. Evening music classes also take place in the school building. The exact same applies to the school building and the sports facilities at Seamount College. These are de facto community facilities serving the needs of our community throughout every day. 
 
-The current proposal simply does not make sense. National road safety policy is explicitly moving towards lower speeds in built-up areas because speed is one of the most important determinants of whether a collision results in serious injury or death. Galway County Council has also committed itself to safer school environments, improved walking and cycling conditions and lower speeds in urban areas.
+Are we seriously suggesting that a child walking to school in the morning deserves a greater degree of protection than that same child walking to the playground or attending sports training later in the day?
 
-Yet in Kinvara, the Council is proposing a small 30 km/h zone concentrated around the village centre while leaving roads outside our schools and through residential parts of the village at 50 km/h.
+International research from New Zealand and Belgium demonstrates the limitations of periodic speed limits, with permanent reductions delivering greater road safety benefits.
 
-That is not a coherent road safety policy. It is a line on a map that bears little relationship to how people actually move around Kinvara.
+Perhaps most importantly, the Department of Transport’s own September 2025 Guidelines for Setting and Managing Speed Limits in Ireland recommend permanent 30km/h limits outside schools in urban cores and in locations where there is regular pedestrian and cyclist activity throughout the day. The guidelines go so far as to acknowledge that periodic speed limits may, in certain circumstances, actually compromise safety.
 
-Children walk and cycle to school on these roads. Families walk from housing estates into the village. Older people cross them. People cycle along them. These are not rural roads passing through open countryside; they are part of our lived, built-up village.
+“Where schools are routinely used for other purposes or public assembly the use of Periodic Speeds Limit may not be appropriate.”
 
-There is also no need to make this complicated. The existing 50 km/h signs already identify the practical boundary of the built-up area. Replace those signs with 30 km/h signs and create one clear, consistent and easily understood speed limit throughout Kinvara.
+“There may be instances where the use of Periodic Speed Limits may in fact compromise safety.”
 
-Anything less leaves us with the absurd situation where 30 km/h is considered necessary on Main Street, but 50 km/h remains acceptable outside schools and through our newer residential areas used every day by children and families.
+Department of Transport, Guidelines for Setting and Managing Speed Limits in Ireland, September 2025, Section 7.5, page 82.
 
-That is impossible to justify.
+The circumstances in Kinvara are precisely those envisaged by the Department when recommending permanent speed reductions.
 
-The draft boundary should be amended before these bye-laws are adopted. Kinvara needs a genuine village-wide 30 km/h zone, not a token one, and we will not accept anything less.
+At a time when we are actively encouraging children to walk and cycle and seeking to make our towns and villages safer and more attractive places to live, it makes no sense whatsoever to introduce a road safety measure which is effectively switched off for most of the day.
+
+Road safety should not operate on a timetable.
+
+I am therefore calling on Galway County Council to reverse this decision in its entirety and introduce permanent, 24-hour, 365-day 30km/h speed limits in the vicinity of both St. Joseph’s Primary School and Seamount College.
+
+Please be assured that I and the members of our Kinvara community will not rest until this deeply flawed decision is reversed. 
 
 Sincerely,
 `;
@@ -144,7 +151,7 @@ function signature(){
   if (!n && !r) return "Kinvara Resident";
   return (n || "Kinvara Resident") + (r ? "\n" + r + ", Kinvara" : "");
 }
-function current(){ return {to:TO, cc:CC.join(", "), subject:SUBJECT, body:BODY + signature()}; }
+function current(){ return {to:TO.join(", "), cc:CC.join(", "), subject:SUBJECT, body:BODY + signature()}; }
 
 function render(){
   const m = current();
@@ -152,8 +159,7 @@ function render(){
   $("v-cc").textContent = m.cc;
   $("v-subject").textContent = m.subject;
   $("v-body").textContent = m.body;
-  const ccc = CC.join(",");
-  $("mailto").href = `mailto:${TO}?cc=${ccc}&subject=${enc(m.subject)}&body=${enc(m.body)}`;
+  $("mailto").href = `mailto:${TO.join(",")}?cc=${CC.join(",")}&subject=${enc(m.subject)}&body=${enc(m.body)}`;
 }
 
 ["name","road"].forEach(id => {
