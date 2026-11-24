@@ -94,7 +94,7 @@ footer{font-size:.85rem;color:var(--muted)}
     <div class="panel">
       <dl>
         <div><div class="copyline"><dt>To</dt><button class="copy" data-k="to">Copy</button></div><dd id="v-to"></dd></div>
-        <div><div class="copyline"><dt>CC (10 councillors)</dt><button class="copy" data-k="cc">Copy</button></div><dd id="v-cc"></dd></div>
+        <div><div class="copyline"><dt>CC (councillors and council officials)</dt><button class="copy" data-k="cc">Copy</button></div><dd id="v-cc"></dd></div>
         <div><div class="copyline"><dt>Subject</dt><button class="copy" data-k="subject">Copy</button></div><dd id="v-subject"></dd></div>
         <div><div class="copyline"><dt>Message</dt><button class="copy" data-k="body">Copy</button></div><p class="body" id="v-body"></p></div>
       </dl>
@@ -106,9 +106,9 @@ footer{font-size:.85rem;color:var(--muted)}
 </div>
 
 <script>
-const TO = ["speedlimitreview@galwaycoco.ie","ufinn@galwaycoco.ie","lconneally@galwaycoco.ie"];
+const TO = ["speedlimitreview@galwaycoco.ie"];
 const CC = ["pkillilea","icanning","gdonohue","gfinnerty","lharney","dnkelly","mkinane","mmaher","jmcclearn","mregan"]
-  .map(u => u + "@cllr.galwaycoco.ie");
+  .map(u => u + "@cllr.galwaycoco.ie").concat(["ufinn@galwaycoco.ie","lconneally@galwaycoco.ie"]);
 const SUBJECT = "Kinvara: Reverse the Periodic Speed Limit Decision – Permanent 30 km/h at St. Joseph’s and Seamount College";
 const BODY = `Dear all,
 
